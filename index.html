@@ -5,38 +5,94 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Estilo -->
+    <link rel="stylesheet" href="css/estilo.css">
+
+    <!-- JS -->
+    <script src="js/script.js" defer></script>
+
     <title>#Frontend Mentor - Componente do gráfico de despesas</title>
 </head>
 <body>
 
-    <section class="">
-        
-    </section>
+    <section class="page">
+
+        <div class="card-grafico">
+            <div class="card-topo">
+                <p class="titulo">My balance</p>
+                <h1 class="balanco">$921.48</h1>
+                <span class="circulo"></span>
+            </div>
     
-    My balance
-  $921.48
-
-  Spending - Last 7 days
-
-  mon
-  tue
-  wed
-  thu
-  fri
-  sat
-  sun
-
-  Total this month
-  $478.33
-
-  +2.4%
-  from last month
-
-    <footer class="footer">
-        <div class="attribution">
-            Desafio do <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-            Codificado por <a href="https://github.com/darlanaraujo" target="_blank">Darlan Araujo</a>.
+            <div class="card-corpo">
+                <h2 class="titulo">Spending - Last 7 days</h2>
+    
+                <div class="wrapper-grafico">
+                    <!-- segunda -->
+                    <div class="coluna-diaria">
+                        <p class="valor">$52.36</p>
+                        <span class="grafico"></span>
+                        <p class="dia">mon</p>
+                    </div>
+                    <!-- terça -->
+                    <div class="coluna-diaria">
+                        <p class="valor">$52.36</p>
+                        <span class="grafico"></span>
+                        <p class="dia">mon</p>
+                    </div>
+                    <!-- quarta -->
+                    <div class="coluna-diaria">
+                        <p class="valor">$52.36</p>
+                        <span class="grafico active"></span>
+                        <p class="dia">mon</p>
+                    </div>
+                    <!-- quinta -->
+                    <div class="coluna-diaria">
+                        <p class="valor">$52.36</p>
+                        <span class="grafico"></span>
+                        <p class="dia">mon</p>
+                    </div>
+                    <!-- sexta -->
+                    <div class="coluna-diaria">
+                        <p class="valor">$52.36</p>
+                        <span class="grafico"></span>
+                        <p class="dia">mon</p>
+                    </div>
+                    <!-- sábado -->
+                    <div class="coluna-diaria">
+                        <p class="valor">$52.36</p>
+                        <span class="grafico"></span>
+                        <p class="dia">mon</p>
+                    </div>
+                    <!-- domingo -->
+                    <div class="coluna-diaria">
+                        <p class="valor">$52.36</p>
+                        <span class="grafico"></span>
+                        <p class="dia">mon</p>
+                    </div>
+                </div>
+                
+                <div class="card-corpo-footer">
+                    <div class="wrapper-left">
+                        <p class="texto">Total this month</p>
+                        <h1 class="valor-total">$478.33</h1>
+                    </div>
+                    <div class="wrapper-right">
+                        <p class="porcentagem">+2.4%</p>
+                        <p class="texto">from last month</p>
+                    </div>
+                </div>
+            </div>
         </div>
-    </footer>
+        
+        
+        <footer class="footer">
+            <div class="attribution">
+                Desafio do <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+                Codificado por <a href="https://github.com/darlanaraujo" target="_blank">Darlan Araujo</a>.
+            </div>
+        </footer>
+    </section>
+
 </body>
 </html>

@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+}
+
+.page {
+  background-color: #f7e9dd;
+  width: 100vmax;
+  height: 100vh;
+  position: relative;
+}
+
+.card-grafico {
+  position: absolute;
+  width: 540px;
+  height: 660px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.card-topo {
+  width: 100%;
+  height: 127px;
+  padding: 20px 40px;
+  background-color: #ef7462;
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.card-topo .titulo {
+  display: block;
+  align-self: flex-end;
+  color: #fff;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: 200;
+}
+
+.card-topo .balanco {
+  display: block;
+  align-self: center;
+  font-size: 35px;
+  color: #fff;
+  font-weight: 400;
+}
+
+.card-topo .circulo {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: #392316;
+  border-radius: 50%;
+  top: 38px;
+  right: 38px;
+}
+
+.card-topo .circulo::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  right: 30px;
+  border: solid 2px #fff;
+}
+
+.card-corpo {
+  width: 100%;
+  background-color: #fffcf7;
+  border-radius: 10px;
+  padding: 30px 45px;
+}
+
+.card-corpo .titulo {
+  color: #392316;
+  margin-bottom: 15px;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.card-corpo .wrapper-grafico {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  width: 100%;
+  height: 250px;
+  align-items: flex-end;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.card-corpo .wrapper-grafico .coluna-diaria {
+  display: block;
+  text-align: center;
+}
+
+.card-corpo .wrapper-grafico .coluna-diaria .valor {
+  display: none;
+  padding: 10px 5px;
+  background-color: #392316;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.card-corpo .wrapper-grafico .coluna-diaria .valor.active {
+  display: block;
+}
+
+.card-corpo .wrapper-grafico .coluna-diaria .grafico {
+  display: inline-flex;
+  width: 70%;
+  min-height: 10px;
+  max-height: 170px;
+  border-radius: 5px;
+  background-color: #ef7462;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.card-corpo .wrapper-grafico .coluna-diaria .grafico.active {
+  background-color: #72b5bb;
+}
+
+.card-corpo .wrapper-grafico .coluna-diaria .grafico:hover {
+  opacity: 85%;
+}
+
+.card-corpo .wrapper-grafico .coluna-diaria .dia {
+  color: #827c74;
+  font-weight: 200;
+}
+
+.card-corpo .wrapper-grafico::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #f7e9dd;
+  bottom: -25px;
+}
+
+.card-corpo .card-corpo-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.card-corpo .card-corpo-footer .texto {
+  font-size: 18px;
+  font-weight: 200;
+  color: #827c74;
+}
+
+.card-corpo .card-corpo-footer .valor-total {
+  font-size: 45px;
+  font-weight: 400;
+  margin-top: 15px;
+  color: #392316;
+}
+
+.card-corpo .card-corpo-footer .porcentagem {
+  display: block;
+  text-align: right;
+  font-size: 18px;
+  font-weight: 400;
+  color: #392316;
+  margin-bottom: 10px;
+}
+
+.footer {
+  position: absolute;
+  display: block;
+  width: 100%;
+  bottom: 10px;
+  text-align: center;
+}
+
+.footer .attribution {
+  font-size: 11px;
+  text-align: center;
+  line-height: 30px;
+}
+
+.footer .attribution a {
+  color: #3e52a3;
+}

@@ -1,0 +1,207 @@
+@import 'padroes';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+}
+
+.page {
+    background-color: $corFundo;
+    width: 100vmax;
+    height: 100vh;
+    position: relative;
+}
+
+.card-grafico {
+    position: absolute;
+    width: 540px;
+    height: 660px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+
+}
+
+.card-topo {
+    width: 100%;
+    height: 127px;
+    padding: 20px 40px;
+    background-color: $corLaranja;
+    border-radius: 10px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    position: relative;
+    margin-bottom: 25px;
+
+    .titulo {
+        display: block;
+        align-self: flex-end;
+        color: #fff;
+        margin-bottom: 10px;
+        font-size: 20px;
+        font-weight: 200;
+    }
+    
+    .balanco {
+        display: block;
+        align-self: center;
+        font-size: 35px;
+        color: #fff;
+        font-weight: 400;
+    }
+
+    .circulo {
+        content: '';
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background-color: $corMarron;
+        border-radius: 50%;
+        top: 38px;
+        right: 38px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            display: block;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            right: 30px;
+            border: solid 2px #fff;
+        }
+    }
+}
+
+.card-corpo {
+    width: 100%;
+    // height: 100%;
+    background-color: $corCard;
+    border-radius: 10px;
+    padding: 30px 45px;
+
+    .titulo {
+        color: $corMarron;
+        margin-bottom: 15px;
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    .wrapper-grafico {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 5px;
+        width: 100%;
+        height: 250px;
+        // justify-content: space-around;
+        align-items: flex-end;
+        margin-bottom: 50px;
+        position: relative;
+
+        // border: solid 1px red;
+
+        .coluna-diaria {
+            display: block;
+            text-align: center;
+
+            .valor {
+                display: none;
+                padding: 10px 5px;
+                background-color: $corMarron;
+                border-radius: 5px;
+                color: #fff;
+                font-size: 14px;
+                margin-bottom: 10px;
+
+                &.active {
+                    display: block;
+                }
+            }
+
+            .grafico {
+                display: inline-flex;
+                width: 70%;
+                min-height: 10px;
+                max-height: 170px;
+                // height: 200px;
+                border-radius: 5px;
+                background-color: $corLaranja;
+                margin-bottom: 10px;
+                cursor: pointer;
+
+                &.active {
+                    background-color: $corAzul;
+                }
+
+                &:hover {
+                    opacity: 85%;
+                }
+            }
+
+            .dia {
+                color: $corTexto;
+                font-weight: 200;
+            }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: $corFundo;
+            bottom: -25px;
+        }
+    }
+
+    .card-corpo-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        .texto {
+            font-size: 18px;
+            font-weight: 200;
+            color: $corTexto;
+        }
+
+        .valor-total {
+            font-size: 45px;
+            font-weight: 400;
+            margin-top: 15px;
+            color: $corMarron
+        }
+
+        .porcentagem {
+            display: block;
+            text-align: right;
+            font-size: 18px;
+            font-weight: 400;
+            color: $corMarron;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.footer {
+    position: absolute;
+    display: block;
+    width: 100%;
+    bottom: 10px;
+    text-align: center;
+
+    .attribution {
+        font-size: 11px;
+        text-align: center;
+        line-height: 30px;
+    
+        & a {
+            color: hsl(228, 45%, 44%);
+        }
+    }
+}
