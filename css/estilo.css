@@ -119,7 +119,7 @@
   display: block;
 }
 
-.card-corpo .wrapper-grafico .coluna-diaria .grafico {
+.card-corpo .wrapper-grafico .coluna-diaria .coluna {
   display: inline-flex;
   width: 70%;
   min-height: 10px;
@@ -130,11 +130,11 @@
   cursor: pointer;
 }
 
-.card-corpo .wrapper-grafico .coluna-diaria .grafico.active {
+.card-corpo .wrapper-grafico .coluna-diaria .coluna.active {
   background-color: #72b5bb;
 }
 
-.card-corpo .wrapper-grafico .coluna-diaria .grafico:hover {
+.card-corpo .wrapper-grafico .coluna-diaria .coluna:hover {
   opacity: 85%;
 }
 

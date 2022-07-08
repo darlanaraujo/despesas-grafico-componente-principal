@@ -1,15 +1,22 @@
 function mostraValor() {
     const valor = document.querySelectorAll('.valor');
-    const coluna = document.querySelectorAll('.grafico');
+    const coluna = document.querySelectorAll('.coluna');
     
     coluna.forEach((item, index) => {
-        item.addEventListener('mouseenter', () => {
-            valor[index].classList.add('active');
-        });
-    
-        item.addEventListener('mouseout', () => {
-            valor[index].classList.remove('active');
-        });
+
+      // item.addEventListener('click', () => {
+      //   valor[index].classList.toggle('active');
+      // });
+      
+      item.addEventListener('mouseenter', () => {
+          valor[index].classList.add('active');
+      });
+  
+      item.addEventListener('mouseout', () => {
+          valor[index].classList.remove('active');
+      });
+
+        
     });
 }
 
@@ -51,11 +58,22 @@ let jsonDados = [
 jsonDados.forEach((item, index) => {
     const valor = document.querySelectorAll('.valor');
     const dia = document.querySelectorAll('.dia');
-    const coluna = document.querySelectorAll('.grafico');
+    const coluna = document.querySelectorAll('.coluna');
     
     valor[index].innerText = item.amount;
     dia[index].innerHTML = item.day;
+    coluna[index].style.height = `${item.amount * 3}px`;
 
-    coluna[index].style.height = item.amount;
+    coluna.forEach((item) => {
+      item.classList.remove('active');
+    });
+
+    coluna[calendario() -1].classList.add('active');
 });
 
+function calendario() {
+  let data = new Date();
+  let diaSemana = data.getDay();
+
+  return diaSemana;
+}
